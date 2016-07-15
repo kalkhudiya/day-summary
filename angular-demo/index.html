@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angular Week Day Summary</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	</head>
+	<body ng-app="daySummery">
+    	<nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header page-scroll">
+                <a href="#" class="navbar-brand">Week Day Summary</a>
+            </div>
+        </nav>
+    	<section ng-controller="homeCtrl">
+			<div class="container">
+				<div class="form-group">
+					<label for="sel1">Select Days:</label>
+		    		<label class="checkbox-inline"><input ng-change="getDaySummery()" type="checkbox" ng-model="day.Monday"> Monday</label>
+		    		<label class="checkbox-inline"><input ng-change="getDaySummery()" type="checkbox" ng-model="day.Tuesday"> Tuesday</label>
+		    		<label class="checkbox-inline"><input ng-change="getDaySummery()" type="checkbox" ng-model="day.Wednesday"> Wednesday</label>
+		    		<label class="checkbox-inline"><input ng-change="getDaySummery()" type="checkbox" ng-model="day.Thursday"> Thursday</label>
+		    		<label class="checkbox-inline"><input ng-change="getDaySummery()" type="checkbox" ng-model="day.Friday"> Friday</label>
+		    		<label class="checkbox-inline"><input ng-change="getDaySummery()" type="checkbox" ng-model="day.Saturday"> Saturday</label>
+		    		<label class="checkbox-inline"><input ng-change="getDaySummery()" type="checkbox" ng-model="day.Sunday"> Sunday</label>
+				</div>
+				<pre>{{summery}}</pre>
+			</div>
+    	</section>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
